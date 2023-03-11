@@ -7,8 +7,16 @@
     </head>
     <body>
         <header th:fragment="header">
-            <h1 style="text-align: center;background-color: black;color:white">TechShop</h1>
-            <hr/>
+            <div class="nav-bar-main">
+                <img height="38" loading="lazy" alt="Parclick" class="ng-lazyloaded" src="https://static.parclick.com/assets/img/logotipo-parclick.svg"><nav>
+                    <ul>
+                        <a th:href="@{/}">Inicio</a>
+                        <a href="#">Acerca de nosotros</a>
+                        <a href="#">Contacto</a>
+                        <a th:href="@{/usuario/inicio}">Inicio sesión</a>
+                    </ul>
+                </nav>
+                <div/>
         </header>  
 
         <footer th:fragment="footer">            

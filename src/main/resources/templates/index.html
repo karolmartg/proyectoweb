@@ -3,9 +3,20 @@
     <head>
         <title>TechShop</title>
         <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Renderizamos el header -->
         <header th:replace="~{layout/plantilla :: header}"/>
+        
+        <!-- Opc debajo del header -->
+        <div th:replace="~{layout/banner :: banner}"></div>
+        
+        <br><br>
+        
         <section>
             <h2>Listado de Clientes</h2>
             <hr>
