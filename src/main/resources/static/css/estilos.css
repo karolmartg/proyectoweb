@@ -135,6 +135,80 @@
     justify-content: center;
     align-items: center;
 }
+.cent_title{
+    padding: 50px;
+    text-align: center;
+}
+
+.cent_title b{
+    font-size: larger;
+}
+.cent_subtitle{
+    text-align: center;
+}
+.cent_img{
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cent_img button {
+    margin-right:40px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+
+}
+.images {
+    display: inline-block;
+    padding: 0 25px;
+    height: 0px;
+    font-size: 16px;
+    margin-left: 60px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.images img {
+    float: left;
+    width: 500px;
+    height: 350px;
+    border-radius: 30%;
+
+}
+.cent_contact{
+    font-size: larger;
+    padding: 60px;
+    text-align: center;
+}
+.cent_contact a{
+    border-radius: 50px;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 0px 10px 68px 19px rgba(0,0,0,0.1);
+    background-color: var(--orange-color);
+}
+.mapsme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maps1{
+    flex-basis: 40%;
+    padding-left: 500px;
+    
+}
+.maps_text{
+    display: flow;
+    font-size: 20px;
+    padding-right: 50px;
+    padding-left: 400px;
+}
+
 
 
 /* ------------------------------------------------------------------------- */
