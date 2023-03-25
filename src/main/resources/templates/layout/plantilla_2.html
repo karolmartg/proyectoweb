@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <div class="nav-bar-main">
+                <img height="38" loading="lazy" alt="Parclick" class="ng-lazyloaded" src="https://static.parclick.com/assets/img/logotipo-parclick.svg"><nav>
+                    <ul>
+                        <a th:href="@{/}">Inicio</a>
+                        <a href="#">Ubicaciones</a>
+                        <a href="#">Promociones</a>
+                        <a href="#">Mis Reservas</a>
+                        <a href="#">Perfil</a>
+                        <a th:href="@{/}">Cerrar</a>
+                    </ul>
+                </nav>
+            <div/>
+        </header>  
+
+        <footer th:fragment="footer">            
+            <hr/>
+            <p style="text-align: center; background-color: yellow">&COPY; Derechos Reservados 2023</p>
+        </footer> 
+
+    </body>
+</html>
