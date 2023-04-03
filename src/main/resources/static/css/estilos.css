@@ -12,10 +12,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/* --------------- NAVEGATION --------------- */
 .nav-bar-main {
-    position: relative;
-    z-index: 100;
     font-size: 20px;
     display: flex;
     flex-wrap: center;
@@ -42,11 +39,6 @@
     color: var(--orange-color);
 }
 
-nav {
-    text-align: center;
-}
-
-/* --------------- BANNER --------------- */
 .banner {
     padding: 50px;
     text-align: center;
@@ -68,7 +60,6 @@ nav {
     background-color: var(--orange-color);
 }
 
-/* --------------- LOGIN --------------- */
 .reg-container {
     width: 400px;
     position: absolute;
@@ -144,72 +135,81 @@ nav {
     justify-content: center;
     align-items: center;
 }
-
-/* --------------- VIDEO BANNER --------------- */
-video {
-    width: 100%;
-    pointer-events: none;
+.cent_title{
+    padding: 50px;
+    text-align: center;
 }
 
-.video-banner {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    position: absolute;
+.cent_title b{
+    font-size: larger;
+}
+.cent_subtitle{
     text-align: center;
+}
+.cent_img{
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.video-banner-seach-title {
-    width: 50%;
-    text-align: left;
     padding: 10px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+.cent_img button {
+    margin-right:40px;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 
-.video-banner-seach-title h2, p, input {
-    padding-bottom: 10px;
 }
-
-.video-banner-seach-title p {
-    font-size: 17px;
-    color: var(--gray-color);
-}
-
-.video-banner-seach-title input {
-    padding: 10px 10px 10px 5px;
-    border-color: transparent;
-    border-radius: .8rem;
-    outline: none;
-    width: 80%;
+.images {
+    display: inline-block;
+    padding: 0 25px;
+    height: 0px;
     font-size: 16px;
-    background: white;
+    margin-left: 60px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
 }
 
-.video-banner-seach-title button {
-    padding: 10px 10px 10px 5px;
-    border-color: transparent;
-    border-radius: 1rem;
-    outline: none;
-    width: 18%;
-    font-size: 16px;
-    background: var(--orange-color);
+.images img {
+    float: left;
+    width: 500px;
+    height: 350px;
+    border-radius: 30%;
+
+}
+.cent_contact{
+    font-size: larger;
+    padding: 60px;
+    text-align: center;
+}
+.cent_contact a{
+    border-radius: 50px;
     color: white;
-    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    box-shadow: 0px 10px 68px 19px rgba(0,0,0,0.1);
+    background-color: var(--orange-color);
+}
+.mapsme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maps1{
+    flex-basis: 40%;
+    padding-left: 500px;
+    
+}
+.maps_text{
+    display: flow;
+    font-size: 20px;
+    padding-right: 50px;
+    padding-left: 400px;
 }
 
-/* z-index: 100; */
 
-.overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0,0,0,0.375);
-}
 
 /* ------------------------------------------------------------------------- */
 .nav {

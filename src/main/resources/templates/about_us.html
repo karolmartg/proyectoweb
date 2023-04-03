@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <!-- Opc debajo del header -->
+        <div class="cent_contact b" >
+            <p style="font-weight: bold; font-size: 70px">Acerca de nosotros</p>
+            <br>
+            <header th:replace="~{layout/plantilla :: header}"/>
+        </div>
+
+
+        <div class="Aboutme">
+            <div class="About_text">
+                <p>Somos una empresa dirigida para el publico que se desplaza en automoviles y buscan maximisar su tiempo en el local y
+                    buscar la mayor comodidad posible,
+                    el tiempo de las personas es muy importante y nosotros tenemos eso en cuenta,
+                    por eso qucimos brindar este servicio para que las personas puedan disfrutar mas
+                    de su tiempo en el dia a dia.
+                    Somos estudiantes de progra web y notamos que hoy por hoy no hay una facilidad para las personas de reservar su campo como lo hay para las salas de cine o para concierto
+                    lo cual fue la rezon de la implementacion de este proyecto.
+                    Para mas informacuion contactenos en la zona de contactos.<br></br>
+                </p>
+               
+            </div>
+            <div class="About1">
+               <img src="img/About.png" alt="about us" width="75"/>
+            </div>
+
+
+        </div>
+    
+        <footer th:replace="~{layout/footer :: footer}"/>
+    </body>
+
+</html>
