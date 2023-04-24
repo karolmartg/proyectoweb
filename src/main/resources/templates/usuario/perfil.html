@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body th:object="${usuario}">
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla_2 :: header}"/>
+
+        <br><br>
+
+
+        <div class="myProfile-container">
+            <div class="myProfile-title">
+                <p style="font-weight: bold">Mi Perfil</p> 
+                <p>A continuación, podrá observar los datos asociados con su perfil:</p>
+            </div>
+
+            <!-- Datos del usuario logueado -->
+            <form th:action="@{/usuario/mi-perfil/actualizar}" th:object="${usuario}" method="POST" >
+                <div class="myProfile-data" th:each="usuario:${usuarios}">
+                    <div class="profile-data-row">
+                        <div class="profile-data">
+                            <label>Id: </label>
+                            <input id="id" type="text" th:name="idUsuario" th:value="${usuario.idUsuario}" readonly />
+                        </div>
+
+                        <div class="profile-data">
+                            <label>Username:</label>
+                            <input id="username" type="text" th:name="username" th:value="${usuario.username}" />
+                        </div>
+                    </div>
+
+                    <div class="profile-data-row">
+                        <div class="profile-data">
+                            <label>Cédula: </label>
+                            <input id="userID" type="text" th:name="cedula" th:value="${usuario.cedula}" />
+                        </div>
+
+                        <div class="profile-data">
+                            <label>Nueva contraseña:</label>
+                            <input id="contraseña" type="password" th:name="contraseña"/>
+                        </div>
+                    </div>
+
+                    <div class="profile-data-row">
+                        <div class="profile-data">
+                            <label>Nombre:</label>
+                            <input id="name-surname" type="text" th:name="nombre" th:value="${usuario.nombre}" />
+                        </div>
+
+                        <div class="profile-data">
+                            <label>Confirmar contraseña:</label>
+                            <input id="confirm-password" type="password" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myProfile-Buttons">
+                    <input type="button" value="Cancelar" th:onclick="window.location.href='/parqueo/inicio'" style="background: none;"/>
+                    <input type="submit" value="Actualizar" style="background: var(--orange-color); color:white;"/>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

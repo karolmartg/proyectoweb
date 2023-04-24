@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Parclick</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <!-- Opc debajo del header -->
+        <div th:replace="~{layout/banner :: banner}"></div>
+
+        <br><br>
+
+        <!---- CENTROS COMERCIALES AFILIADOS -->
+        <div class="images-container">
+            <section class="images">
+                <img src="https://multiplaza-samantha.s3.amazonaws.com/uploads/custom_seo/image/18/Ezcazu.jpg" alt="Multiplaza Escazu">
+                <p class="cent_subtitle">Mall Multiplaza Escazú</p>
+                <br>
+            </section>
+
+            <section class="images">
+                <img src="https://i0.wp.com/amprensa.com/wp-content/uploads/2017/06/Terrazas-5.jpg?fit=655%2C437&ssl=1" alt="Terrazas Lindora">
+                <p class="cent_subtitle">Terrazas Lindora</p>
+                <br>
+            </section>
+        </div>
+
+        <div class="images-container">
+            <section class="images">
+                <img src="https://www.info.co.cr/wp-content/uploads/2023/02/plaza-real-cariari-heredia-costa-rica.jpg" alt="Plaza Real Cariari">
+                <p class="cent_subtitle">Plaza Real Cariari</p>
+                <br>
+            </section>
+            <section class="images">
+                <img src="https://th.bing.com/th/id/R.f9af87641410343f3e726f49035ef8be?rik=rTKFU1nZdRv3pQ&riu=http%3a%2f%2fcrmalls.com%2fimages%2fmalls%2fm11%2fgal%2findex4.jpg&ehk=UiEKTXK87wpoPOb9oJvJb%2bSGGfTq%2bGxvdIxdyl%2f6MtE%3d&risl=&pid=ImgRaw&r=0" alt="Mall Multicentro">
+                <p class="cent_subtitle">Mall Multicentro</p>
+                <br>
+            </section>
+        </div>
+
+        <!---- PARQUEOS AFILIADOS -->
+        <div class="images-container">
+            <div class="cent_title" >
+                <b>[[#{index-parkings}]]</b>
+            </div>
+            <section class="images">
+                <img src="https://www.crtennis.com/wp-content/uploads/2016/02/parqueo1-1.jpg" alt="Parqueo Tennis Club">
+                <p class="cent_subtitle">Parqueo Tennis Club</p>
+                <br>
+            </section>
+            <section class="images">
+                <img src="https://www.elfinancierocr.com/resizer/UqyPo2nUrMd2Q0VOPrOkalZ1dGw=/1200x0/center/middle/filters:quality(100)/arc-anglerfish-arc2-prod-gruponacion.s3.amazonaws.com/public/KJ7RXHB2QRAXFKANDYOAPG5AE4.JPG" alt="Parqueo Mall Oxigeno">
+                <p class="cent_subtitle">Parqueo Mall Oxigeno</p>
+                <br>
+            </section>
+        </div>
+
+        <div class="images-container">
+            <section class="images">
+                <img src="https://b122fe8e0b8ea4d16cb3-8420fc0ce05d0ddef095398ad3e98f10.ssl.cf5.rackcdn.com/110117_parque_estacionamiento_full.jpg" alt="Parqueo Público Yesouye">
+                <p class="cent_subtitle">Parqueo Público Yesouye</p>
+                <br>
+            </section>
+            <section class="images">
+                <img src="https://th.bing.com/th/id/OIP.3eMaUuRkTlRZ0wInaPLfzgHaHa?pid=ImgDet&rs=1" alt="Parqueo Público El Gato">
+                <p class="cent_subtitle">Parqueo Público El Gato</p>
+                <br>
+            </section>
+        </div>
+        
+        <center>
+            <div style="color: #000; text-align:center;">
+                <p>[[#{switch-message}]]:</p> 
+                <a th:href="@{/(lang=en)}">EN</a>
+                <a th:href="@{/(lang=es)}">ES</a>
+            </div>
+        </center>
+    </body>
+</html>

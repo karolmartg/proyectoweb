@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla_2 :: header}"/>
+
+        <br><br>
+        <div class="ubicaciones-banner"> 
+            <div class="ubicaciones-banner-seach-title">
+                <h2>Empecemos...</h2>
+                <p>Elija entre millones de espacios disponibles o reserve su espacio con anticipación. Únase a más de 10 millones de conductores que disfrutan de fácil estacionamiento.</p>
+                <input type="search" /> 
+                <button>Buscar</button>
+                <br><br>
+
+                </ul>            
+            </div>
+
+            <div class="filter">
+                <p>Filtro:</p>
+                <div id="buttons" type=hide>
+                    <button class="button-value" onclick="filterProduct('Todos')">Todos</button>
+                    <button class="button-value" onclick="filterProduct('Locación')">
+                        Locación</button>
+                    <button class="button-value" onclick="filterProduct('Distancia')">
+                        Distancia</button>
+                    <button class="button-value" onclick="filterProduct('Abiertos')">
+                        Abiertos</button>
+                    <button class="button-value" onclick="filterProduct('Espacios_Total')">
+                        Espacios</button>
+                </div>
+            </div>
+            <br><br>
+            <div th:if="${ubicaciones !=null and !ubicaciones.empty}" class="location-table">
+                <div th:each="ubicacion : ${ubicaciones}" class="location-card">
+                    <form th:action="@{/ubicaciones/reservar}" th:object="${ubicacion}" method="POST">
+                        <p id="idUbicacion" th:field="*{idUbicacion}" th:text='${ubicacion.idUbicacion}' hidden></p>
+                        <img th:src="${ubicacion.imagen_link}" alt="alt"/>
+                        <p th:text='${ubicacion.nombre}' th:field="*{nombre}" ></p>
+                        <input style="background: var(--orange-color); color:white;" type="submit" value="Reservar">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </body>
+</html>

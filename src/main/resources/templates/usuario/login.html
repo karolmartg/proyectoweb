@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parclick</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <div class="reg-container">
+            <div class="reg-header">
+                <a id="btn-login" th:href="@{/usuario/inicio}">[[#{header.signin}]]</a>
+                <div class="v-line"></div>
+                <a id="btn-register" th:href="@{/usuario/registrar}">[[#{header.register}]]</a>
+            </div>
+
+            <div class="reg-content">
+                <form th:action="@{/usuario/login}" th:object="${usuario}" method="POST" >
+                    <label>[[#{label.username}]]</label>
+                    <input type="text" th:field="*{username}" placeholder="jsmith" name="username" />
+
+                    <label>[[#{label.password}]]</label>
+                    <input type="password" th:field="*{contraseña}" placeholder="contraseña" name="contraseña" />
+
+                    <input style="background: var(--orange-color); color:white;" type="submit" th:value="#{button.signin}">
+                </form>
+            </div>
+        </div>
+</body>
+</html>

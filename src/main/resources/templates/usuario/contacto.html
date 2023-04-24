@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parclick</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <!-- Opc debajo del header -->
+        <div class="cent_contact" >
+            <p style="font-weight: bold; font-size: 18px">[[#{contact-banner.title}]]</p>
+            <br>
+            <a th:href="@{/usuario/registrar}">[[#{contact-banner.button}]]</a>
+        </div>
+        
+        <!-- Segunda parte -->
+        <div class="mapsme">
+            <div class="maps_text">
+                <p>[[#{contact.message-1}]]<br></br>
+                <p>[[#{contact.message-2}]]
+                <p>San José: +506 2222-2222 | Alajuela: +506 2323-2323</p><br></br>
+                <p>[[#{contact.mesasge-3}]]
+                <p>San José: +506 2222-2222 | Alajuela: +506 2323-2323</p><br></br>
+                <p>[[#{contact.message-3}]]
+                <p>San José: +506 2222-2222 | Email: parclick@correo.com</p>
+                <!--<p>Interesado en alguno de nuestros servicios? Habla con nuestro personal!</p><br></br>
+                <p>Interesado en alguno de nuestros servicios? Habla con nuestro personal!</p><br></br>
+                <p>Interesado en alguno de nuestros servicios? Habla con nuestro personal!</p><br></br>-->
+            </div>
+            <div class="maps1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.022812689342!2d-84.10388748474256!3d9.932057926924378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fcacceaf84a5%3A0xd4348fd55debf6f!2sC.%2050%2C%20Morenos%2C%20San%20Jos%C3%A9%2C%2010108!5e0!3m2!1ses-419!2scr!4v1678649889656!5m2!1ses-419!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        -->
+    </body>
+
+</html>

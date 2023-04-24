@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla_2 :: header}"/>
+        <br><br>
+        <div class="book-container">
+            <div class="book-header">
+                <p class="book-header-title">Reserve aquí</p>
+                <p>¡Reserve su espacio de estacionamiento ahora mismo! <a id="book-now" href="#">Haz click aquí</a></p>
+            </div>
+            <br><br>
+
+            <p class="book-header-title">Mis Reservas</p>
+            <div th:if="${reservas !=null and !reservas.empty}" class="book-histoy">
+                <div th:each="reserva : ${reservas}" class="book-card">
+                    <div class="book-card-top">
+                        <p name="idReserva" th:text="${reserva.idFactura}" >#</p>
+
+                        <th:block th:if="${reserva.activo==1}">
+                            <div class="status" id="active"></div>
+                        </th:block>
+
+                        <th:block th:if="${reserva.activo==0}">
+                            <div class="status" id="inactive"></div>
+                        </th:block>
+                    </div>
+                    <div class="book-card-bottom">
+                        <p name="fechaReserva" th:text="${reserva.fechaReserva}"></p>
+                        <p name="precio" th:text="₡ + ${reserva.precio}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
