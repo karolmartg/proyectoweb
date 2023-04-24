@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Renderizamos el header -->
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        <div class="reg-container">
+            <div class="reg-header">
+                <a id="btn-login" th:href="@{/usuario/inicio}">Iniciar sesión</a>
+                <div class="v-line"></div>
+                <a id="btn-register" th:href="@{/usuario/registrar}">Registrarse</a>
+            </div>
+            
+            <div class="reg-content">
+                <form action="action">
+                    <label>Usuario:</label>
+                    <input type="text" placeholder="usuario" name="user">
+                    
+                    <label>Contraseña:</label>
+                    <input type="password" placeholder="contraseña" name="passw">
+                    
+                    <input style="background: var(--orange-color); color:white;" type="submit" value="Iniciar sesion">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
